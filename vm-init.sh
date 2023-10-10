@@ -1,11 +1,27 @@
-# Update the package manager
-sudo yum update -y
+# Update the package manager per OS
 
+if [ -f /etc/debian_version ]; then
+    sudo apt-get update
+elif [ -f /etc/redhat-release ]; then
+    sudo yum update
+elif [ -f /etc/arch-release ]; then
+    sudo pacman -Syu
+else
+    echo "Unsupported OS"
+    exit 1;
+fi
+fi
 # Install Konsole
-sudo yum install konsole -y
-
-# Install Zsh and konsole
-sudo yum install konsole zsh -y
+if [ -f /etc/debian_version ]; then
+    sudo apt-get install konsole zsh -y
+elif [ -f /etc/redhat-release ]; then
+    sudo yum install konsole zsh -y
+elif [ -f /etc/arch-release ]; then
+    sudo pacman -S konsole zsh- y
+else
+    echo "Unsupported OS"
+    exit 1;
+fi
 
 # Set Zsh as the default shell
 chsh -s $(which zsh)
