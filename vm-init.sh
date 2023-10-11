@@ -10,7 +10,7 @@ else
     echo "Unsupported OS"
     exit 1;
 fi
-fi
+
 # Install Konsole
 if [ -f /etc/debian_version ]; then
     sudo apt-get install konsole zsh -y
