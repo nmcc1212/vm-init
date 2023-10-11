@@ -13,11 +13,11 @@ fi
 
 # Install Konsole
 if [ -f /etc/debian_version ]; then
-    sudo apt-get install konsole zsh -y
+    sudo apt-get install konsole zsh git -y
 elif [ -f /etc/redhat-release ]; then
-    sudo yum install konsole zsh -y
+    sudo yum install konsole zsh git -y
 elif [ -f /etc/arch-release ]; then
-    sudo pacman -S konsole zsh- y
+    sudo pacman -S konsole zsh git -y
 else
     echo "Unsupported OS"
     exit 1;
