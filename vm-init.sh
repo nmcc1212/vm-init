@@ -11,13 +11,13 @@ else
     exit 1;
 fi
 
-# Install Konsole
+# Install Konsole, Zsh and Git
 if [ -f /etc/debian_version ]; then
-    sudo apt-get install konsole zsh git -y
+    sudo apt-get install konsole zsh git -y || { echo "Failed to install packages. Exiting."; exit 1; }
 elif [ -f /etc/redhat-release ]; then
-    sudo yum install konsole zsh git -y
+    sudo yum install konsole zsh git -y || { echo "Failed to install packages. Exiting."; exit 1; }
 elif [ -f /etc/arch-release ]; then
-    sudo pacman -S konsole zsh git -y
+    sudo pacman -S konsole zsh git -y || { echo "Failed to install packages. Exiting."; exit 1; }
 else
     echo "Unsupported OS"
     exit 1;
