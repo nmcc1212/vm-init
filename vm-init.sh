@@ -43,3 +43,6 @@ curl https://raw.githubusercontent.com/ahmadawais/shades-of-purple-konsole/maste
 
 # Set the konsole scheme
 echo "[Appearance]\n ColorScheme=shades-of-purple \n [General]\n Command=/bin/zsh \n Name=Shell \n Parent=FALLBACK/" >> ~/.local/share/konsole/Shell.profile
+
+# Install tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
