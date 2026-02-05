@@ -30,7 +30,7 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install shades-of-purple theme
-curl https://raw.githubusercontent.com/ahmadawais/shades-of-purple-iterm2/master/shades-of-purple.zsh-theme > ~/.oh-my-zsh/themes/shades-of-purple.zsh-theme
+curl https://raw.githubusercontent.com/nmcc1212/shades-of-purple-windows-terminal/refs/heads/main/shades-of-purple.zsh-theme > ~/.oh-my-zsh/themes/shades-of-purple.zsh-theme
 
 # Set the theme
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="shades-of-purple"/g' ~/.zshrc
